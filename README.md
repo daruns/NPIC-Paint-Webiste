@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NPIC Paint Website
 
-## Getting Started
+A modern, responsive marketing website built with Next.js and TypeScript for NPIC Paint company.
 
-First, run the development server:
+## Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 14** - React framework with App Router
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Utility-first CSS framework
+- **Docker** - Containerization
+
+## Project Structure
+
+```
+npic-web/
+├── public/                    # Static assets (images, logos)
+├── src/
+│   ├── app/                   # App Router
+│   │   ├── layout.tsx        # Root layout
+│   │   ├── page.tsx          # Homepage
+│   │   └── globals.css       # Global styles
+│   └── components/           # React components
+│       ├── Header.tsx        # Navigation
+│       ├── Hero.tsx          # Hero section
+│       ├── AboutUs.tsx       # About section
+│       ├── OurServices.tsx   # Services grid
+│       ├── Pricing.tsx       # Pricing plans
+│       ├── Footer.tsx        # Footer
+│       └── ...               # Other components
+├── docker-compose.yml        # Docker configuration
+├── Dockerfile               # Container setup
+└── tailwind.config.ts       # Styling configuration
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Clone repository
+git clone https://github.com/daruns/NPIC-Paint-Webitse.git
+cd NPIC-Paint-Webiste
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Install dependencies
+npm install
 
-## Learn More
+# Start development server
+npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+# Open http://localhost:3000
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Docker Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Build and start with Docker Compose
+docker-compose up --build
 
-## Deploy on Vercel
+# Or with Docker only
+docker build -t npic-web .
+docker run -p 3000:3000 npic-web
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Production Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+# Build for production
+npm run build
+npm start
+
+# Or deploy to Vercel/Netlify by connecting GitHub repo
+```
+
+## Available Scripts
+
+```bash
+npm run dev          # Development server
+npm run build        # Production build
+npm run start        # Production server
+```
+
+---
+
+**Live Demo:** http://localhost:3000 (after running locally)  
+**Repository:** https://github.com/daruns/NPIC-Paint-Webitse.git
+**Developer:** Darun Omar
+**Email:** darun.s.omar@gmail.com
