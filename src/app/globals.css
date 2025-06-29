@@ -1,8 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #161616;
+  --foreground: #ffffff ;
+  --black: #161616;
+  --primary: #7D4283;
+  --gray: #646A69;
+  --secondary: #7951B3; 
+  --white: #ffffff;
 }
 
 @theme inline {
@@ -14,8 +22,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #161616;
+    --foreground: #ffffff;
+    --black: #161616;
+    --primary: #7D4283;
+    --secondary: #7951B3; 
+    --white: #ffffff;
   }
 }
 
@@ -23,4 +35,56 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-title-gradient {
+  background: --webkit-linear-gradient(to right, #E879F9 65%, #c75ed07d) text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #E879F9 65%, #c75ed07d) text;
+  background-clip: text;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Smooth scrolling */
+.scrollbar-hide {
+  scroll-behavior: smooth;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-custom-black {
+  background-color: var(--black);
+}
+.text-primary {
+  color: var(--primary);
+}
+.text-custom-black {
+  color: var(--black);
+}
+
+.aboutus-custom-bg-position {
+  background-position-x: -49vw !important;
+  background-position-y: 49vw !important
+}
+
+@media (min-width: 768px) {
+  .aboutus-custom-bg-position {
+    background-position: initial !important;
+  }
+}
+
+.custom-text-gray {
+  color: var(--gray) !important;
 }
